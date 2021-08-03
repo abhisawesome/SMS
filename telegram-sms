@@ -1,0 +1,15 @@
+1. Search for 'bot father' in telegram 
+2.Create a bot in telegram using typing message to bot-father with /newbot
+3. Add unique name to bot by ending with 'bot' eg example_bot
+4.You will get access token by a message from bot-father.
+5.create a PUBLIC channel  and add the bot as admin in grou
+6. https://api.telegram.org/bot<TOKEN>/sendMessage?chat_id=@<CHANNEL UNIQUE NAME>&text=123 
+example:
+channel name be like t.me/xyz
+chat_id = @xyz
+7. send message using the above http method
+8. You will receive a message like
+{"ok":true,"result":{"message_id":2,"chat":{"id":1212321,"title":"Title","username":"username","type":"channel"},"date":1581697815,"text":"123"}}
+9. The id in the given response is chat id
+10 . Now you change the channel to private and send message using this id,by replacing chat_id to this id
+https://api.telegram.org/bot<TOKEN>/sendMessage?chat_id=1212321&text=123~
